@@ -105,6 +105,33 @@ body {}
         height: 50%;
     }
 
+    /* Team Section */
+
+    .experts-section .card-img img {
+        transition: transform 0.5s ease;
+    }
+
+    .experts-section .card-img:hover img {
+        transform: scale(1.08);
+    }
+
+    .card-img .overlay-btn a {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.4s ease;
+    }
+
+    .card-img:hover .overlay-btn a {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .card-img .btn-primary:hover {
+        background: linear-gradient(to bottom, #0073FF, #0DA2FF);
+        color: #ffffff;
+        outline: none;
+    }
+
 }
 
 @keyframes marquee {
