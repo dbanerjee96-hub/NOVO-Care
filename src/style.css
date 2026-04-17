@@ -18,6 +18,8 @@ body {}
     --bg-subtract: url('../assets/Subtract-box-banner.png');
     --bg-services_banner: url('../assets/services-banner.png');
     --bg-team_banner: url('../assets/team_banner.png');
+    --bg-subs_banner: url('../assets/subs-curve.png');
+    --bg-contact_banner: url('../assets/contact-banner.png');
 
     --breakpoint-xs: 375px;
     --breakpoint-sm: 576px;

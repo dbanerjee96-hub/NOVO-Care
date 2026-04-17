@@ -1,11 +1,354 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>NOVO CARE</title>
+    <link rel="stylesheet" href="./output/style.css">
 </head>
+
 <body>
-    
+
+    <!-- Header Starts -->
+    <header class="absolute top-0 left-0 w-full z-50">
+        <div class="container w-full">
+            <nav class="flex items-center">
+
+                <div class="nav-logo w-24 md:w-32 lg:w-40 xl:w-75 shrink-0">
+                    <a href="index.html"><img src="./assets/Group 5.png" alt="logo"></a>
+                </div>
+
+                <div class="menu md:hidden">
+                    <span></span>
+                </div>
+
+                <div class="navbar-collapse hidden md:flex items-center flex-1">
+
+                    <ul class="flex items-center gap-1 lg:gap-4 xl:gap-8 mx-auto">
+                        <li><a class="nav-link md:px-3 lg:px-5 whitespace-nowrap" href="index.html">Home</a></li>
+                        <li><a class="nav-link md:px-3 lg:px-5 whitespace-nowrap" href="services.html">Services</a></li>
+                        <li><a class="nav-link md:px-3 lg:px-5 whitespace-nowrap" href="team.html">Team</a></li>
+                        <li><a class="nav-link active md:px-3 lg:px-5 whitespace-nowrap" href="#">Subscriptions</a></li>
+                        <li><a class="nav-link md:px-3 lg:px-5 whitespace-nowrap" href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+
+                    <div class="flex items-center gap-2 lg:gap-4 xl:gap-6 shrink-0 ms-auto">
+                        <div class="phone cursor-pointer">
+                            <img src="./assets/phone.png" alt="phone" class="w-5 lg:w-10">
+                        </div>
+
+                        <div class="navbar-btn shrink-0">
+                            <a class="btn-primary whitespace-nowrap text-xs xl:text-base md:px-4 md:py-3 lg:px-7.5 lg:py-5"
+                                href="#">Book
+                                Appointment</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </nav>
+        </div>
+    </header>
+
+    <!-- Header Ends -->
+
+    <!-- Banner Starts -->
+
+    <section class="banner-section relative z-0 py-[270px] bg-[image:var(--bg-subs_banner)]">
+        <div class="container">
+            <div
+                class="py-[25px] px-[30px] bg-[#ffffff] rounded-[50px] inline-block shadow-lg relative z-10 lg:left-[4%] 2xl:left-[7%]">
+                <p
+                    class="font-mont font-medium text-[20px] xs:text-[24px] md:text-[32px] lg:text-[40px] 2xl:text-[52px] text-[#0DA2FF]">
+                    Choose Your
+                    Best Plan</p>
+            </div>
+            <div
+                class="subs-doctor absolute md:top-1/2 md:left-[300px] lg:left-1/2 lg:-translate-x-1/2 md:-translate-y-1/2 z-0">
+                <img src="./assets/subs-doctor.png" alt="Doctor">
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner Ends -->
+
+    <!-- Pricing Starts -->
+
+    <section class="pricing-section py-12.5 md:py-21.25">
+        <div class="container">
+            <h2
+                class="title2 font-play font-bold text-[48px] sm:text-[64px] md:text-[90px] lg:text-[132px] tracking-[10%] text-stroke text-center mb-8">
+                Pricing</h2>
+
+            <div class="flex flex-wrap justify-center gap-[30px] md:gap-[40px] lg:gap-[60px]">
+
+                <!-- Monthly -->
+                <div id="card-monthly"
+                    class="pricing-card w-full sm:w-[calc(50%-20px)] lg:w-[calc(33.333%-40px)] cursor-pointer bg-[#77C0FF] rounded-[24px] px-4 pt-4 pb-10 md:pb-16.5 shadow-md">
+
+                    <div class="card-top p-5 mb-12.5 rounded-2xl bg-[#ffffff]/30">
+                        <span
+                            class="card-badge inline-block mb-10 md:mb-16.5 px-4 py-1 bg-[#ffffff] rounded-full text-[24px] font-mont font-medium">
+                            Monthly
+                        </span>
+                        <p class="text-3xl font-semibold">30,000 INR</p>
+                    </div>
+                    <ul class="mb-10 md:mb-15 font-mont font-medium text-[20px]">
+                        <li class="flex gap-3 mb-7.5">
+                            <div><img src="./assets/circle-tick.png" alt="circle-tick"></div>
+                            <div>Free check-up</div>
+                        </li>
+                        <li class="flex gap-3 mb-7.5">
+                            <div><img src="./assets/circle-tick.png" alt="circle-tick"></div>
+                            <div>3 month of validity</div>
+                        </li>
+                        <li class="flex gap-3">
+                            <div><img src="./assets/circle-tick.png" alt="circle-tick"></div>
+                            <div>Discounts on treatments</div>
+                        </li>
+                    </ul>
+
+                    <div class="card-btn bg-[#E5E5E5] rounded-[50px] py-5 text-center">
+                        <a class="font-mont font-medium text-[24px] text-[#0DA2FF]" href="">Subscribe Now</a>
+                    </div>
+                </div>
+
+                <!-- Yearly -->
+                <div id="card-yearly"
+                    class="pricing-card w-full sm:w-[calc(50%-20px)] lg:w-[calc(33.333%-40px)] cursor-pointer bg-[#77C0FF] rounded-[24px] px-4 pt-4 pb-10 md:pb-16.5 shadow-md">
+
+                    <div class="card-top p-5 mb-12.5 rounded-2xl bg-[#ffffff]/30">
+                        <span
+                            class="card-badge inline-block mb-10 md:mb-16.5 px-4 py-1 bg-[#ffffff] rounded-full text-[24px] font-mont font-medium">
+                            Yearly
+                        </span>
+                        <p class="text-3xl font-semibold">60,000 INR</p>
+                    </div>
+                    <ul class="mb-10 md:mb-15 font-mont font-medium text-[20px]">
+                        <li class="flex gap-3 mb-7.5">
+                            <div><img src="./assets/circle-tick.png" alt="circle-tick"></div>
+                            <div>Free check-up</div>
+                        </li>
+                        <li class="flex gap-3 mb-7.5">
+                            <div><img src="./assets/circle-tick.png" alt="circle-tick"></div>
+                            <div>3 month of validity</div>
+                        </li>
+                        <li class="flex gap-3">
+                            <div><img src="./assets/circle-tick.png" alt="circle-tick"></div>
+                            <div>Discounts on treatments</div>
+                        </li>
+                    </ul>
+
+                    <div class="card-btn bg-[#E5E5E5] rounded-[50px] py-5 text-center">
+                        <a class="font-mont font-medium text-[24px] text-[#0DA2FF]" href="">Subscribe Now</a>
+                    </div>
+                </div>
+
+                <!-- Quarterly -->
+                <div id="card-quarterly"
+                    class="pricing-card w-full sm:w-[calc(50%-20px)] lg:w-[calc(33.333%-40px)] cursor-pointer bg-[#77C0FF] rounded-[24px] px-4 pt-4 pb-10 md:pb-16.5 shadow-md">
+
+                    <div class="card-top p-5 mb-12.5 rounded-2xl bg-[#ffffff]/30">
+                        <span
+                            class="card-badge inline-block mb-10 md:mb-16.5 px-4 py-1 bg-[#ffffff] rounded-full text-[24px] font-mont font-medium">
+                            Quarterly
+                        </span>
+                        <p class="text-3xl font-semibold">30,000 INR</p>
+                    </div>
+                    <ul class="mb-10 md:mb-15 font-mont font-medium text-[20px]">
+                        <li class="flex gap-3 mb-7.5">
+                            <div><img src="./assets/circle-tick.png" alt="circle-tick"></div>
+                            <div>Free check-up</div>
+                        </li>
+                        <li class="flex gap-3 mb-7.5">
+                            <div><img src="./assets/circle-tick.png" alt="circle-tick"></div>
+                            <div>3 month of validity</div>
+                        </li>
+                        <li class="flex gap-3">
+                            <div><img src="./assets/circle-tick.png" alt="circle-tick"></div>
+                            <div>Discounts on treatments</div>
+                        </li>
+                    </ul>
+
+                    <div class="card-btn bg-[#E5E5E5] rounded-[50px] py-5 text-center">
+                        <a class="font-mont font-medium text-[24px] text-[#0DA2FF]" href="">Subscribe Now</a>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Pricing Ends -->
+
+    <!-- Holders Starts -->
+
+    <section class="pre-holders-section py-12.5">
+        <div class="container">
+            <h2
+                class="holders mb-8 md:mb-20 font-mont text-[#000000] font-medium text-[30px] sm:text-[40px] md:text-[52px] text-center">
+                Premium
+                Holders</h2>
+
+            <!-- Marquee Wrapper -->
+            <div class="overflow-hidden">
+                <div class="flex gap-6 animate-marquee w-max">
+
+                    <img src="./assets/ph-1.png" class="w-16 h-16 rounded-full object-cover" />
+                    <img src="./assets/ph-2.png" class="w-16 h-16 rounded-full object-cover" />
+                    <img src="./assets/ph-3.png" class="w-16 h-16 rounded-full object-cover" />
+                    <img src="./assets/ph-4.png" class="w-16 h-16 rounded-full object-cover" />
+                    <img src="./assets/ph-5.png" class="w-16 h-16 rounded-full object-cover" />
+                    <img src="./assets/ph-6.png" class="w-16 h-16 rounded-full object-cover" />
+                    <img src="./assets/ph-7.png" class="w-16 h-16 rounded-full object-cover" />
+                    <img src="./assets/ph-8.png" class="w-16 h-16 rounded-full object-cover" />
+                    <img src="./assets/ph-9.png" class="w-16 h-16 rounded-full object-cover" />
+                    <img src="./assets/ph-10.png" class="w-16 h-16 rounded-full object-cover" />
+                    <img src="./assets/ph-11.png" class="w-16 h-16 rounded-full object-cover" />
+                    <img src="./assets/ph-12.png" class="w-16 h-16 rounded-full object-cover" />
+                    <img src="./assets/ph-1.png" class="w-16 h-16 rounded-full object-cover" />
+                    <img src="./assets/ph-2.png" class="w-16 h-16 rounded-full object-cover" />
+                    <img src="./assets/ph-3.png" class="w-16 h-16 rounded-full object-cover" />
+                    <img src="./assets/ph-3.png" class="w-16 h-16 rounded-full object-cover" />
+                    <img src="./assets/ph-4.png" class="w-16 h-16 rounded-full object-cover" />
+                    <img src="./assets/ph-5.png" class="w-16 h-16 rounded-full object-cover" />
+                    <img src="./assets/ph-6.png" class="w-16 h-16 rounded-full object-cover" />
+                    <img src="./assets/ph-7.png" class="w-16 h-16 rounded-full object-cover" />
+                    <img src="./assets/ph-8.png" class="w-16 h-16 rounded-full object-cover" />
+                    <img src="./assets/ph-9.png" class="w-16 h-16 rounded-full object-cover" />
+                    <img src="./assets/ph-10.png" class="w-16 h-16 rounded-full object-cover" />
+                    <img src="./assets/ph-11.png" class="w-16 h-16 rounded-full object-cover" />
+                    <img src="./assets/ph-12.png" class="w-16 h-16 rounded-full object-cover" />
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Holders Ends -->
+
+    <!-- Footer Starts -->
+
+    <footer class="pt-[50px] md:pt-[100px] bg-[#01797E]">
+        <div class="container">
+
+            <div class="row flex flex-wrap gap-y-10 gap-x-6 justify-center lg:justify-between">
+
+                <div
+                    class="footer-links w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] text-center lg:text-start">
+                    <ul>
+                        <li class="mb-6"><a class="font-inter font-medium hover:underline text-[#ffffff] text-lg"
+                                href="#">Home</a></li>
+                        <li class="mb-6"><a class="font-inter font-medium hover:underline text-[#ffffff] text-lg"
+                                href="#">Services</a>
+                        </li>
+                        <li class="mb-6"><a class="font-inter font-medium hover:underline text-[#ffffff] text-lg"
+                                href="#">Team</a></li>
+                        <li class="mb-6"><a class="font-inter font-medium hover:underline text-[#ffffff] text-lg"
+                                href="#">Subscriptions</a>
+                        </li>
+                        <li><a class="font-inter font-medium hover:underline text-[#ffffff] text-lg" href="#">Contact
+                                Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="social-links w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] text-center">
+                    <div class="social-hdr font-inter font-medium text-[#ffffff] text-2xl mb-[24px]">Follow Us</div>
+                    <div class="phone-mail mb-12.5">
+                        <p class="mail"><a class="text-[#ffffff] font-inter font-medium hover:underline text-lg"
+                                href="#">care@brightsmile.com</a></p>
+                        <p class="ph"><a class="text-[#ffffff] font-inter font-medium hover:underline text-lg"
+                                href="#">+91
+                                9123456789</a></p>
+                    </div>
+                    <div class="social-icons flex justify-center gap-6">
+                        <div><a href="#"><img src="./assets/facebook.png" alt=""></a></div>
+                        <div><a href="#"><img src="./assets/instagram.png" alt=""></a></div>
+                        <div><a href="#"><img src="./assets/linkedin.png" alt=""></a></div>
+                    </div>
+                </div>
+
+                <div class="address-sec w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] text-center lg:text-end">
+                    <div class="address-hdr font-inter font-medium hover:underline text-[#ffffff] text-2xl mb-6">Address
+                    </div>
+                    <div
+                        class="address mx-auto lg:me-0 max-w-47.5 font-inter font-medium text-lg text-white mb-2 md:mb-5 text-center lg:text-end">
+                        BrightSmile Dental Care, 45 Park Street,
+                        Kolkata - 700016
+                    </div>
+                    <div>
+                        <img src="./assets/map.png" class="mx-auto lg:ms-auto lg:me-0 cursor-pointer" alt="map">
+                    </div>
+                </div>
+
+            </div>
+
+            <div
+                class="big-text tracking-[0.3em] font-inter font-medium text-center text-[#ffffff] text-[30px] sm:text-[50px] md:text-[80px] lg:text-[100px] xl:text-[135px] 2xl:text-[160px] 3xl:text-[200px]">
+                NOVO CARE
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Footer Ends -->
+
+    <script>
+        // Get elements
+        const cardMonthly = document.getElementById("card-monthly");
+        const cardYearly = document.getElementById("card-yearly");
+        const cardQuarterly = document.getElementById("card-quarterly");
+
+        // Store all cards
+        const cards = [cardMonthly, cardYearly, cardQuarterly];
+
+        // Reset function
+        function removeActive() {
+            for (let i = 0; i < cards.length; i++) {
+
+                // Reset card
+                cards[i].classList.remove("bg-[#0DA2FF]", "scale-105", "text-white");
+                cards[i].classList.add("bg-[#77C0FF]", "text-black");
+
+                // Reset span (badge)
+                const badge = cards[i].querySelector(".card-badge");
+                badge.classList.remove("bg-[#0DA2FF]", "text-white");
+                badge.classList.add("bg-[#ffffff]", "text-black");
+            }
+        }
+
+        // Activate function
+        function activateCard(card) {
+            removeActive();
+
+            // Card active
+            card.classList.remove("bg-[#77C0FF]", "text-black");
+            card.classList.add("bg-[#0DA2FF]", "scale-105", "text-white");
+
+            // Span active
+            const badge = card.querySelector(".card-badge");
+            badge.classList.remove("bg-[#ffffff]", "text-black");
+            badge.classList.add("bg-[#0DA2FF]", "text-white");
+        }
+
+        // Events
+        cardMonthly.addEventListener("click", function () {
+            activateCard(cardMonthly);
+        });
+
+        cardYearly.addEventListener("click", function () {
+            activateCard(cardYearly);
+        });
+
+        cardQuarterly.addEventListener("click", function () {
+            activateCard(cardQuarterly);
+        });
+    </script>
+
 </body>
+
 </html>
