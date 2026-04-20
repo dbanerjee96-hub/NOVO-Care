@@ -2,7 +2,7 @@
 
 @import "tailwindcss";
 
-body {}
+
 
 @utility container {
     max-width: 1820px;
@@ -58,13 +58,15 @@ body {}
     }
 
 
-    .nav-link {
+    .nav-link,
+    .mobile-link {
         @apply px-5 py-2.5 rounded-[50px] transition-all duration-300;
         color: #000000;
     }
 
     .nav-link:hover,
-    .nav-link.active {
+    .nav-link.active,
+    .mobile-link.active {
         color: #ffffff;
         background: linear-gradient(to bottom, #0073FF, #0DA2FF);
     }

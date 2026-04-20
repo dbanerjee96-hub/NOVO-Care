@@ -11,45 +11,79 @@
 <body>
 
     <!-- Header Starts -->
-    <header class="absolute top-0 left-0 w-full z-50">
+
+    <header class="absolute top-0 left-0 w-full z-50 overflow-x-clip">
         <div class="container w-full">
             <nav class="flex items-center">
 
-                <div class="nav-logo w-24 md:w-32 lg:w-40 xl:w-75 shrink-0">
-                    <a href="index.html"><img src="./assets/Group 5.png" alt="logo"></a>
+                <!-- Logo -->
+                <div class="nav-logo w-24 md:w-32 lg:w-40 shrink-0">
+                    <a href="index.html">
+                        <img src="./assets/Group 5.png" alt="logo">
+                    </a>
                 </div>
 
-                <div class="menu md:hidden">
-                    <span></span>
+                <!-- Hamburger -->
+                <div class="menu md:hidden cursor-pointer ms-auto z-50" id="menuBtn">
+                    <img src="./assets/hamburger.png" alt="menu" class="w-8">
                 </div>
 
-                <div class="navbar-collapse hidden md:flex items-center flex-1">
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center flex-1">
 
-                    <ul class="flex items-center gap-1 lg:gap-4 xl:gap-8 mx-auto">
-                        <li><a class="nav-link md:px-3 lg:px-5 whitespace-nowrap" href="index.html">Home</a></li>
-                        <li><a class="nav-link md:px-3 lg:px-5 whitespace-nowrap" href="services.html">Services</a></li>
-                        <li><a class="nav-link md:px-3 lg:px-5 whitespace-nowrap" href="team.html">Team</a></li>
-                        <li><a class="nav-link active md:px-3 lg:px-5 whitespace-nowrap" href="#">Subscriptions</a></li>
-                        <li><a class="nav-link md:px-3 lg:px-5 whitespace-nowrap" href="contact.html">Contact Us</a>
-                        </li>
+                    <!-- Nav Links -->
+                    <ul class="flex items-center gap-4 lg:gap-6 xl:gap-8 mx-auto">
+                        <li><a class="nav-link" href="index.html">Home</a></li>
+                        <li><a class="nav-link" href="services.html">Services</a></li>
+                        <li><a class="nav-link" href="team.html">Team</a></li>
+                        <li><a class="nav-link active" href="subscriptions.html">Subscriptions</a></li>
+                        <li><a class="nav-link" href="contact.html">Contact Us</a></li>
                     </ul>
 
-                    <div class="flex items-center gap-2 lg:gap-4 xl:gap-6 shrink-0 ms-auto">
+                    <!-- Right Side -->
+                    <div class="flex items-center gap-3 lg:gap-5 shrink-0 ms-auto">
+
+                        <!-- Phone -->
                         <div class="phone cursor-pointer">
-                            <img src="./assets/phone.png" alt="phone" class="w-5 lg:w-10">
+                            <img src="./assets/phone.png" alt="phone" class="w-5 lg:w-8">
                         </div>
 
-                        <div class="navbar-btn shrink-0">
-                            <a class="btn-primary whitespace-nowrap text-xs xl:text-base md:px-4 md:py-3 lg:px-7.5 lg:py-5"
-                                href="#">Book
-                                Appointment</a>
+                        <!-- Button -->
+                        <div class="navbar-btn">
+                            <a class="btn-primary whitespace-nowrap text-xs md:text-sm lg:text-base px-4 py-2 lg:px-6 lg:py-3"
+                                href="#">
+                                Book Appointment
+                            </a>
                         </div>
+
                     </div>
 
                 </div>
 
             </nav>
         </div>
+
+        <!-- ✅ MOBILE MENU -->
+        <div id="mobileMenu" class="fixed top-0 right-0 h-screen w-[90vw] sm:w-[70vw] bg-white shadow-2xl 
+               flex flex-col justify-center items-center z-40 
+               transform translate-x-full transition-transform duration-300">
+
+            <ul class="flex flex-col gap-6 text-center">
+                <li><a href="index.html" class="mobile-link text-lg">Home</a></li>
+                <li><a href="services.html" class="mobile-link text-lg">Services</a></li>
+                <li><a href="team.html" class="mobile-link text-lg">Team</a></li>
+                <li><a href="subscriptions.html" class="mobile-link active text-lg">Subscriptions</a></li>
+                <li><a href="contact.html" class="mobile-link text-lg">Contact Us</a></li>
+            </ul>
+
+            <div class="mt-8">
+                <a href="#" class="btn-primary px-6 py-3 text-sm">
+                    Book Appointment
+                </a>
+            </div>
+
+        </div>
+
     </header>
 
     <!-- Header Ends -->
@@ -298,6 +332,18 @@
     <!-- Footer Ends -->
 
     <script>
+
+        // Header Section
+
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('translate-x-full');
+        });
+
+        // Pricing
+
         // Get elements
         const cardMonthly = document.getElementById("card-monthly");
         const cardYearly = document.getElementById("card-yearly");
