@@ -15,7 +15,7 @@
 
     <!-- Header Starts -->
 
-    <header class="absolute top-0 left-0 w-full z-50 overflow-x-clip">
+    <header class="absolute top-0 left-0 w-full z-50">
         <div class="container w-full">
             <nav class="flex items-center">
 
@@ -66,7 +66,7 @@
             </nav>
         </div>
 
-        <!-- ✅ MOBILE MENU -->
+        <!-- MOBILE MENU -->
         <div id="mobileMenu"
             class="fixed top-0 right-0 h-screen w-[90%] sm:w-[70%] bg-white shadow-2xl flex flex-col justify-center items-center z-40 transform translate-x-full transition-transform duration-300">
 
@@ -95,30 +95,31 @@
         <!-- Banner Starts -->
 
         <section
-            class="banner-section relative min-h-screen flex items-center pt-24 md:pt-28 lg:pt-32 xl:pt-36 2xl:pt-40 3xl:pt-44 overflow-visible">
+            class="banner-section relative min-h-screen flex items-end pt-24 md:pt-28 lg:pt-32 xl:pt-36 2xl:pt-40 3xl:pt-44 overflow-visible">
 
-            <div class="container h-full flex flex-col justify-center">
+            <div class="container h-full flex flex-col justify-between">
 
                 <!-- Heading -->
                 <h1
-                    class="text-center font-play text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[90px] 3xl:text-[120px] text-[#01797E] tracking-wide mb-16 md:mb-20 lg:mb-24">
+                    class="text-center font-play text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[90px] 3xl:text-[120px] text-[#03363C] text-stroke tracking-wide mb-16 md:mb-20 lg:mb-24">
                     Your Smile, Our Priority
                 </h1>
 
                 <!-- Card -->
                 <div
-                    class="relative bg-gradient-to-r from-[#01787D] to-[#00B9B6] rounded-[40px] px-3 sm:px-4 md:px-10 lg:px-12 pt-1 sm:pt-3 md:pt-8 lg:pt-12 pb-8 md:pb-10 lg:pb-12">
+                    class="relative bg-gradient-to-r from-[#01787D] to-[#00B9B6] rounded-[40px] px-3 sm:px-4 md:px-10 lg:px-12 pt-1 sm:pt-3 md:pt-8 lg:pt-12 pb-8 md:pb-10 lg:pb-12 h-[250px] sm:h-[280px] lg:h-[300px] 2xl:h-[460px]">
 
                     <!-- Doctor Image -->
                     <div
-                        class="absolute left-1/2 -translate-x-[5%] sm:-translate-x-[15%] md:-translate-x-[40%] bottom-0 z-10">
+                        class="absolute left-1/2 -translate-x-[5%] sm:-translate-x-[5%] md:-translate-x-[40%] -bottom-16 sm:-bottom-10 md:-bottom-6 lg:-bottom-8 2xl:-bottom-10 z-10">
                         <img src="./assets/banner-img.png"
-                            class="w-[220px] sm:w-[280px] md:w-[360px] lg:w-[440px] xl:w-[490px] 3xl:w-[530px] translate-y-[6%]"
+                            class="h-[280px] xs:h-[200px] sm:h-[300px] md:h-[420px] lg:h-[460px] xl:h-[510px] 2xl:h-[708px] w-auto object-contain"
                             alt="doctor">
                     </div>
 
                     <!-- Content Row -->
-                    <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-10">
+                    <div
+                        class="h-full flex flex-col md:flex-row justify-between items-start md:items-end gap-6 md:gap-10">
 
                         <!-- LEFT CONTENT -->
                         <div class="text-white max-w-md mt-20 lg:mt-0">
@@ -140,7 +141,7 @@
 
                         <!-- RIGHT SUBTRACT BOX -->
                         <div
-                            class="sub-box relative bg-[image:var(--bg-subtract)] bg-no-repeat bg-cover bg-center pl-3 pr-10 py-3 mt-6 lg:mt-0">
+                            class="sub-box hidden md:block relative bg-[image:var(--bg-subtract)] bg-no-repeat bg-cover bg-center pl-3 pr-10 py-3 mt-6 lg:mt-0">
 
                             <img src="./assets/reviews-bnr.png" alt="reviews" class="mb-2">
 
@@ -149,12 +150,12 @@
                             </div>
 
                             <p class="max-w-[220px] text-sm md:text-base text-[#01797E]">
-                                average patient rating based on over 1300 verified reviews on google
+                                Average patient rating based on over 1300 verified reviews on google
                             </p>
 
                             <!-- Arrow -->
                             <div
-                                class="absolute -top-2 -right-4 w-[60px] h-[60px] md:w-[70px] md:h-[70px] bg-[#DBFFFF] rounded-full flex items-center justify-center">
+                                class="absolute -top-2 -right-4 w-[60px] h-[60px] md:w-[70px] md:h-[70px] bg-[#DBFFFF] rounded-full flex items-center justify-center transition-transform duration-300 hover:translate-x-3.5 hover:-translate-y-2.5 hover:-rotate-45 cursor-pointer">
                                 <img src="./assets/Vector.png" alt="arrow">
                             </div>
 
@@ -338,9 +339,14 @@
                             </li>
                         </ul>
 
-                        <div class="card-btn bg-[#E5E5E5] rounded-[50px] py-5 text-center">
-                            <a class="font-mont font-medium text-[24px] text-[#0DA2FF]" href="">Subscribe Now</a>
+                        <div
+                            class="card-btn bg-[#E5E5E5] rounded-[50px] py-5 text-center transition-all duration-300 hover:bg-white hover:shadow-lg active:scale-95 group">
+                            <a class="font-mont font-medium text-[24px] text-[#0DA2FF] transition-colors duration-300 group-hover:text-[#0070BB]"
+                                href="#">
+                                Subscribe Now
+                            </a>
                         </div>
+
                     </div>
 
                     <!-- Yearly -->
@@ -369,9 +375,14 @@
                             </li>
                         </ul>
 
-                        <div class="card-btn bg-[#E5E5E5] rounded-[50px] py-5 text-center">
-                            <a class="font-mont font-medium text-[24px] text-[#0DA2FF]" href="">Subscribe Now</a>
+                        <div
+                            class="card-btn bg-[#E5E5E5] rounded-[50px] py-5 text-center transition-all duration-300 hover:bg-white hover:shadow-lg active:scale-95 group">
+                            <a class="font-mont font-medium text-[24px] text-[#0DA2FF] transition-colors duration-300 group-hover:text-[#0070BB]"
+                                href="#">
+                                Subscribe Now
+                            </a>
                         </div>
+
                     </div>
 
                     <!-- Quarterly -->
@@ -399,10 +410,15 @@
                                 <div>Discounts on treatments</div>
                             </li>
                         </ul>
-
-                        <div class="card-btn bg-[#E5E5E5] rounded-[50px] py-5 text-center">
-                            <a class="font-mont font-medium text-[24px] text-[#0DA2FF]" href="">Subscribe Now</a>
+                        <div
+                            class="card-btn bg-[#E5E5E5] rounded-[50px] py-5 text-center transition-all duration-300 hover:bg-white hover:shadow-lg active:scale-95 group">
+                            <a class="font-mont font-medium text-[24px] text-[#0DA2FF] transition-colors duration-300 group-hover:text-[#0070BB]"
+                                href="#">
+                                Subscribe Now
+                            </a>
                         </div>
+
+
                     </div>
 
                 </div>
@@ -761,7 +777,9 @@
                         Kolkata - 700016
                     </div>
                     <div>
-                        <img src="./assets/map.png" class="mx-auto lg:ms-auto lg:me-0 cursor-pointer" alt="map">
+                        <img src="./assets/map.png"
+                            class="mx-auto lg:ms-auto lg:me-0 cursor-pointer transition-transform duration-300 ease-out hover:scale-105"
+                            alt="map">
                     </div>
                 </div>
 
@@ -807,53 +825,52 @@
         // Pricing Section
 
         // Get elements
-        const cardMonthly = document.getElementById("card-monthly");
-        const cardYearly = document.getElementById("card-yearly");
-        const cardQuarterly = document.getElementById("card-quarterly");
+        const cards = document.querySelectorAll(".pricing-card");
 
-        // Store all cards
-        const cards = [cardMonthly, cardYearly, cardQuarterly];
+        // Function to reset all cards except the one currently clicked
+        function deactivateOthers(currentCard) {
+            cards.forEach(card => {
+                if (card !== currentCard) {
+                    card.classList.remove("bg-[#0DA2FF]", "scale-115", "text-white");
+                    card.classList.add("bg-[#77C0FF]", "text-black");
 
-        // Reset function
-        function removeActive() {
-            for (let i = 0; i < cards.length; i++) {
+                    const badge = card.querySelector(".card-badge");
+                    badge.classList.remove("bg-[#0DA2FF]", "text-white");
+                    badge.classList.add("bg-[#ffffff]", "text-black");
+                }
+            });
+        }
 
-                // Reset card
-                cards[i].classList.remove("bg-[#0DA2FF]", "scale-105", "text-white");
-                cards[i].classList.add("bg-[#77C0FF]", "text-black");
+        // Main toggle function
+        function toggleCard(card) {
+            const isActive = card.classList.contains("scale-115");
 
-                // Reset span (badge)
-                const badge = cards[i].querySelector(".card-badge");
+            // 1. Deactivate all other cards first
+            deactivateOthers(card);
+
+            // 2. Toggle the clicked card
+            const badge = card.querySelector(".card-badge");
+
+            if (isActive) {
+                // Shrink it back
+                card.classList.remove("bg-[#0DA2FF]", "scale-115", "text-white");
+                card.classList.add("bg-[#77C0FF]", "text-black");
+
                 badge.classList.remove("bg-[#0DA2FF]", "text-white");
                 badge.classList.add("bg-[#ffffff]", "text-black");
+            } else {
+                // Grow it
+                card.classList.remove("bg-[#77C0FF]", "text-black");
+                card.classList.add("bg-[#0DA2FF]", "scale-115", "text-white");
+
+                badge.classList.remove("bg-[#ffffff]", "text-black");
+                badge.classList.add("bg-[#0DA2FF]", "text-white");
             }
         }
 
-        // Activate function
-        function activateCard(card) {
-            removeActive();
-
-            // Card active
-            card.classList.remove("bg-[#77C0FF]", "text-black");
-            card.classList.add("bg-[#0DA2FF]", "scale-115", "text-white");
-
-            // Span active
-            const badge = card.querySelector(".card-badge");
-            badge.classList.remove("bg-[#ffffff]", "text-black");
-            badge.classList.add("bg-[#0DA2FF]", "text-white");
-        }
-
-        // Events
-        cardMonthly.addEventListener("click", function () {
-            activateCard(cardMonthly);
-        });
-
-        cardYearly.addEventListener("click", function () {
-            activateCard(cardYearly);
-        });
-
-        cardQuarterly.addEventListener("click", function () {
-            activateCard(cardQuarterly);
+        // Event Listeners (using a loop is cleaner)
+        cards.forEach(card => {
+            card.addEventListener("click", () => toggleCard(card));
         });
 
     </script>

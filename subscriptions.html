@@ -144,9 +144,14 @@
                         </li>
                     </ul>
 
-                    <div class="card-btn bg-[#E5E5E5] rounded-[50px] py-5 text-center">
-                        <a class="font-mont font-medium text-[24px] text-[#0DA2FF]" href="">Subscribe Now</a>
+                    <div
+                        class="card-btn bg-[#E5E5E5] rounded-[50px] py-5 text-center transition-all duration-300 hover:bg-white hover:shadow-lg active:scale-95 group">
+                        <a class="font-mont font-medium text-[24px] text-[#0DA2FF] transition-colors duration-300 group-hover:text-[#0070BB]"
+                            href="#">
+                            Subscribe Now
+                        </a>
                     </div>
+
                 </div>
 
                 <!-- Yearly -->
@@ -175,9 +180,14 @@
                         </li>
                     </ul>
 
-                    <div class="card-btn bg-[#E5E5E5] rounded-[50px] py-5 text-center">
-                        <a class="font-mont font-medium text-[24px] text-[#0DA2FF]" href="">Subscribe Now</a>
+                    <div
+                        class="card-btn bg-[#E5E5E5] rounded-[50px] py-5 text-center transition-all duration-300 hover:bg-white hover:shadow-lg active:scale-95 group">
+                        <a class="font-mont font-medium text-[24px] text-[#0DA2FF] transition-colors duration-300 group-hover:text-[#0070BB]"
+                            href="#">
+                            Subscribe Now
+                        </a>
                     </div>
+
                 </div>
 
                 <!-- Quarterly -->
@@ -206,9 +216,14 @@
                         </li>
                     </ul>
 
-                    <div class="card-btn bg-[#E5E5E5] rounded-[50px] py-5 text-center">
-                        <a class="font-mont font-medium text-[24px] text-[#0DA2FF]" href="">Subscribe Now</a>
+                    <div
+                        class="card-btn bg-[#E5E5E5] rounded-[50px] py-5 text-center transition-all duration-300 hover:bg-white hover:shadow-lg active:scale-95 group">
+                        <a class="font-mont font-medium text-[24px] text-[#0DA2FF] transition-colors duration-300 group-hover:text-[#0070BB]"
+                            href="#">
+                            Subscribe Now
+                        </a>
                     </div>
+
                 </div>
 
 
@@ -315,7 +330,9 @@
                         Kolkata - 700016
                     </div>
                     <div>
-                        <img src="./assets/map.png" class="mx-auto lg:ms-auto lg:me-0 cursor-pointer" alt="map">
+                        <img src="./assets/map.png"
+                            class="mx-auto lg:ms-auto lg:me-0 cursor-pointer transition-transform duration-300 ease-out hover:scale-105"
+                            alt="map">
                     </div>
                 </div>
 
@@ -345,53 +362,52 @@
         // Pricing
 
         // Get elements
-        const cardMonthly = document.getElementById("card-monthly");
-        const cardYearly = document.getElementById("card-yearly");
-        const cardQuarterly = document.getElementById("card-quarterly");
+        const cards = document.querySelectorAll(".pricing-card");
 
-        // Store all cards
-        const cards = [cardMonthly, cardYearly, cardQuarterly];
+        // Function to reset all cards except the one currently clicked
+        function deactivateOthers(currentCard) {
+            cards.forEach(card => {
+                if (card !== currentCard) {
+                    card.classList.remove("bg-[#0DA2FF]", "scale-115", "text-white");
+                    card.classList.add("bg-[#77C0FF]", "text-black");
 
-        // Reset function
-        function removeActive() {
-            for (let i = 0; i < cards.length; i++) {
+                    const badge = card.querySelector(".card-badge");
+                    badge.classList.remove("bg-[#0DA2FF]", "text-white");
+                    badge.classList.add("bg-[#ffffff]", "text-black");
+                }
+            });
+        }
 
-                // Reset card
-                cards[i].classList.remove("bg-[#0DA2FF]", "scale-105", "text-white");
-                cards[i].classList.add("bg-[#77C0FF]", "text-black");
+        // Main toggle function
+        function toggleCard(card) {
+            const isActive = card.classList.contains("scale-115");
 
-                // Reset span (badge)
-                const badge = cards[i].querySelector(".card-badge");
+            // 1. Deactivate all other cards first
+            deactivateOthers(card);
+
+            // 2. Toggle the clicked card
+            const badge = card.querySelector(".card-badge");
+
+            if (isActive) {
+                // Shrink it back
+                card.classList.remove("bg-[#0DA2FF]", "scale-115", "text-white");
+                card.classList.add("bg-[#77C0FF]", "text-black");
+
                 badge.classList.remove("bg-[#0DA2FF]", "text-white");
                 badge.classList.add("bg-[#ffffff]", "text-black");
+            } else {
+                // Grow it
+                card.classList.remove("bg-[#77C0FF]", "text-black");
+                card.classList.add("bg-[#0DA2FF]", "scale-115", "text-white");
+
+                badge.classList.remove("bg-[#ffffff]", "text-black");
+                badge.classList.add("bg-[#0DA2FF]", "text-white");
             }
         }
 
-        // Activate function
-        function activateCard(card) {
-            removeActive();
-
-            // Card active
-            card.classList.remove("bg-[#77C0FF]", "text-black");
-            card.classList.add("bg-[#0DA2FF]", "scale-115", "text-white");
-
-            // Span active
-            const badge = card.querySelector(".card-badge");
-            badge.classList.remove("bg-[#ffffff]", "text-black");
-            badge.classList.add("bg-[#0DA2FF]", "text-white");
-        }
-
-        // Events
-        cardMonthly.addEventListener("click", function () {
-            activateCard(cardMonthly);
-        });
-
-        cardYearly.addEventListener("click", function () {
-            activateCard(cardYearly);
-        });
-
-        cardQuarterly.addEventListener("click", function () {
-            activateCard(cardQuarterly);
+        // Event Listeners (using a loop is cleaner)
+        cards.forEach(card => {
+            card.addEventListener("click", () => toggleCard(card));
         });
     </script>
 
